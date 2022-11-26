@@ -1,0 +1,23 @@
+@startuml
+
+package "ICEBREAKER" {
+  [FPGA]  --> PMOD2
+  PMOD1 --> [FPGA]
+}
+
+
+node "NIC100 PMOD" {
+  [ENC424J600] - RJ45
+  [ENC424J600] -->  PMOD1
+}
+
+
+
+
+node "CAN PMOD" {
+  [MCP25625] - DB9
+  PMOD2 --> [MCP25625]
+}
+
+
+@enduml
