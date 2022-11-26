@@ -1,0 +1,11 @@
+[book]
+authors = ["Saket Sinha"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Project Proposal"
+
+[output.html]
+curly-quotes = true
+git-repository-url = "https://github.com/disdi/proposal"
+site-url = "https://saketsinha.de/proposal/"
