@@ -1,0 +1,8 @@
+@startuml
+json LibreCar {
+
+   "SW": ["Firmware - C baremetal program", "Gateware- Soft RISC-V CPU vexriscv HDL"],
+
+   "HW": ["FPGA - Lattice iCE40UP5k FPGA"]
+}
+@enduml

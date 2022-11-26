@@ -1,4 +1,4 @@
-# Design
+# Detail Design
 
 Libre Car Contorl allows developers to:
 
