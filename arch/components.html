@@ -147,9 +147,24 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="components"><a class="header" href="#components">Components</a></h1>
-<p><img src="../images/top.svg" alt=" COmponents " /></p>
+<p><img src="../images/top.svg" alt=" Components " /></p>
+<h2 id="hardware"><a class="header" href="#hardware">Hardware</a></h2>
+<p>iCE40 FPGA chip has severfal Pmod interface (peripheral module interface) for connecting peripheral modules.</p>
+<p><img src="../images/fpga.svg" alt=" FPGA " /></p>
+<p>Pmod CAN and Pmod NIC100  are directly connected to FPGA via this interface : </p>
+<p><img src="../images/pmod.svg" alt=" PMOD " /></p>
+<h3 id="can"><a class="header" href="#can">CAN</a></h3>
+<p>Pmod CAN is a CAN 2.0B controller with an integrated transceiver. The embedded Microchip MCP25625 chip connects directly to the physical CAN Bus.</p>
+<p><img src="../images/pmod_can.svg" alt=" PMOD CAN " /></p>
+<h3 id="ethernet"><a class="header" href="#ethernet">Ethernet</a></h3>
+<p>The PmodNIC100 utilizes Microchip’s ENC424J600 to provide both MAC
+and PHY support to enable Ethernet functionality at data rates up to 10 Mbit/s.</p>
+<p><img src="../images/pmod_nic100.svg" alt=" PMOD NIC100 " /></p>
 <h2 id="gateware"><a class="header" href="#gateware">Gateware</a></h2>
+<p>We use Litex framewrok to program VexRiscv-SMP CPU Risc-V SOC on the iCEBreaker FPGA  that can be programmed from C language.</p>
+<p><img src="../images/litex.svg" alt=" Litex " /></p>
 <h2 id="firmware"><a class="header" href="#firmware">Firmware</a></h2>
+<h2 id="application"><a class="header" href="#application">Application</a></h2>
 
                     </main>
 
