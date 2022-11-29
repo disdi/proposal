@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Component Overview - Project Proposal</title>
+        <title>Component Overview - Libre Car Control</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../req.html"><strong aria-hidden="true">2.</strong> Requirements</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../arch/system.html"><strong aria-hidden="true">3.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="../arch/components.html" class="active"><strong aria-hidden="true">3.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="../arch/if.html"><strong aria-hidden="true">3.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="../design.html"><strong aria-hidden="true">4.</strong> Design</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../design.html"><strong aria-hidden="true">2.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../arch/system.html"><strong aria-hidden="true">3.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="../arch/components.html" class="active"><strong aria-hidden="true">3.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="../arch/if.html"><strong aria-hidden="true">3.3.</strong> Interface</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -111,7 +111,7 @@
                         </button>
                                             </div>
 
-                    <h1 class="menu-title">Project Proposal</h1>
+                    <h1 class="menu-title">Libre Car Control</h1>
 
                     <div class="right-buttons">
                                                 <a href="../print.html" title="Print this book" aria-label="Print this book">
@@ -147,6 +147,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="components"><a class="header" href="#components">Components</a></h1>
+<p>The main components of system architecture are broken down in Software and Hardware.</p>
 <p><img src="../images/top.svg" alt=" Components " /></p>
 <h2 id="hardware"><a class="header" href="#hardware">Hardware</a></h2>
 <p>iCE40 FPGA chip has severfal Pmod interface (peripheral module interface) for connecting peripheral modules.</p>
@@ -161,10 +162,12 @@
 and PHY support to enable Ethernet functionality at data rates up to 10 Mbit/s.</p>
 <p><img src="../images/pmod_nic100.svg" alt=" PMOD NIC100 " /></p>
 <h2 id="gateware"><a class="header" href="#gateware">Gateware</a></h2>
-<p>We use Litex framewrok to program VexRiscv-SMP CPU Risc-V SOC on the iCEBreaker FPGA  that can be programmed from C language.</p>
+<p>We use Litex framework to program VexRiscv-SMP CPU Risc-V SOC on the iCEBreaker FPGA  that can be programmed from C language.</p>
 <p><img src="../images/litex.svg" alt=" Litex " /></p>
 <h2 id="firmware"><a class="header" href="#firmware">Firmware</a></h2>
+<p>C language based device driver is used to program SPI interface that connects to CAN bus via MCP25625 and Ehternet via  ENC424J600.</p>
 <h2 id="application"><a class="header" href="#application">Application</a></h2>
+<p>Service to signal conversion layer is written to trasmit Ethernet based SOMEIP prototocol to CAN based signals. </p>
 
                     </main>
 

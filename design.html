@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Design - Project Proposal</title>
+        <title>Design - Libre Car Control</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="req.html"><strong aria-hidden="true">2.</strong> Requirements</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">3.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">3.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">3.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="design.html" class="active"><strong aria-hidden="true">4.</strong> Design</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="design.html" class="active"><strong aria-hidden="true">2.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">3.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">3.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">3.3.</strong> Interface</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -111,7 +111,7 @@
                         </button>
                                             </div>
 
-                    <h1 class="menu-title">Project Proposal</h1>
+                    <h1 class="menu-title">Libre Car Control</h1>
 
                     <div class="right-buttons">
                                                 <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -146,8 +146,14 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="detail-design"><a class="header" href="#detail-design">Detail Design</a></h1>
-<p>Libre Car Contorl allows developers to:</p>
+                        <h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<p>Libre Car Control allows developers to:</p>
+<ul>
+<li>Implement a simple service over Ethernet</li>
+<li>Convert this service to signal in Hardware</li>
+<li>Use this signal in control bus of vehicle CAN network</li>
+</ul>
+<h2 id="product-objectives"><a class="header" href="#product-objectives">Product Objectives</a></h2>
 <ul>
 <li>Read control messages from the Vehicle’s CAN Bus via Ethernet network</li>
 <li>Send control commands to the Vehicle’s CAN Bus via Ethernet network</li>
@@ -158,10 +164,13 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="arch/if.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
+                                                    <a rel="next" href="arch/system.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -169,10 +178,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="arch/if.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
+                                    <a rel="next" href="arch/system.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>
