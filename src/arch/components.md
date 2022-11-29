@@ -4,7 +4,6 @@ The main components of system architecture are broken down in Software and Hardw
 
 ![ Components ](../images/top.svg)
 
-
 ## Hardware
 
 iCE40 FPGA chip has severfal Pmod interface (peripheral module interface) for connecting peripheral modules.
@@ -34,13 +33,10 @@ We use Litex framework to program VexRiscv-SMP CPU Risc-V SOC on the iCEBreaker 
 
 ![ Litex ](../images/litex.svg)
 
-
 ## Firmware
 
 C language based device driver is used to program SPI interface that connects to CAN bus via MCP25625 and Ehternet via  ENC424J600.
 
-
 ## Application
 
 Service to signal conversion layer is written to trasmit Ethernet based SOMEIP prototocol to CAN based signals. 
-
