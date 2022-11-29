@@ -1,5 +1,7 @@
 # Components
 
+The main components of system architecture are broken down in Software and Hardware.
+
 ![ Components ](../images/top.svg)
 
 
@@ -28,14 +30,17 @@ and PHY support to enable Ethernet functionality at data rates up to 10 Mbit/s.
 
 ## Gateware
 
-We use Litex framewrok to program VexRiscv-SMP CPU Risc-V SOC on the iCEBreaker FPGA  that can be programmed from C language.
+We use Litex framework to program VexRiscv-SMP CPU Risc-V SOC on the iCEBreaker FPGA  that can be programmed from C language.
 
 ![ Litex ](../images/litex.svg)
 
 
 ## Firmware
 
+C language based device driver is used to program SPI interface that connects to CAN bus via MCP25625 and Ehternet via  ENC424J600.
 
 
 ## Application
+
+Service to signal conversion layer is written to trasmit Ethernet based SOMEIP prototocol to CAN based signals. 
 

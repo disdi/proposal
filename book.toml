@@ -3,7 +3,7 @@ authors = ["Saket Sinha"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Project Proposal"
+title = "Libre Car Control"
 
 [output.html]
 curly-quotes = true
