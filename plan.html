@@ -3,9 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-                        <base href="https://saketsinha.de/proposal/">
-        
+        <title>Development Plan - Libre Car Control</title>
+                
 
         <!-- Custom HTML head -->
         
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html"><strong aria-hidden="true">5.</strong> Development Plan</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html" class="active"><strong aria-hidden="true">5.</strong> Development Plan</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -147,13 +146,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="work-breakdown-structure"><a class="header" href="#work-breakdown-structure">WORK BREAKDOWN STRUCTURE</a></h1>
+<p>A work breakdown structure has been created to identify and correctly estimate the time and cost of each possible task in the proposal. Most of task do depend on the progress of each other so they need to be executed in a serial Top-Down approach.</p>
+<h2 id="task-duration"><a class="header" href="#task-duration">Task Duration</a></h2>
+<p>To estimate the time of each task, the beta distribution formula was used, shown below. This formula allows to base the estimated time more on the average time a task may require, giving a more accurate estimation of the time needed to finish a task.</p>
+<p>𝐸𝑠𝑡𝑖𝑚𝑎𝑡𝑒𝑑 𝑡𝑖𝑚𝑒 = (𝑜𝑝𝑡𝑖𝑚𝑖𝑠𝑡𝑖𝑐 𝑡𝑖𝑚𝑒 + 4 ∗ 𝑎𝑣𝑒𝑟𝑎𝑔𝑒 𝑡𝑖𝑚𝑒 + 𝑝𝑒𝑠𝑠𝑖𝑚𝑖𝑠𝑡𝑖𝑐 𝑡𝑖𝑚𝑒) / 6 </p>
+<p>Each task completion is considered as a Major or Minor Milestone to help us break down the overall Project duration into smaller sprints which reduces the chance of the task falling into overtime, as well as speeding up the possible completion time.</p>
+<h2 id="milestones-"><a class="header" href="#milestones-">Milestones :</a></h2>
+<p>The milestones for this project have been set in a chronological order, with independent, parallelizable tasks being set at the start, and interdependent tasks being arranged in a serial order and can be done one after the other.</p>
+<pre><code>    * Develop the hardware: 
+        ** Task: Create an opensource gateware which comprises of softcore RISC-V and peripherals like CAN and Ethernet
+        ** Acceptance Criteria: Gateware can be compiled and booted up on a FPGA development board.
+        ** Duration: 80 hours
+
+    * Develop the firmware: 
+        ** Task: Create opensource firmware which comprises of kernel and device drivers to bring up RISC-V soft core and peripherals like CAN and Ethernet.
+        ** Acceptance Criteria: FPGA runs a RISC-V softcore with CAN bus and Ethernet bus communication working.
+        ** Duration: 80 hours
+
+    * Develop the middleware: 
+        ** Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&amp;Trace and  Measuement&amp;Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.
+        ** Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:
+            *** DoIP ( Diagnostics over Internet Protocol )
+            *** DLT ( Diagnostics Log and Trace ) 
+            *** XCP (Universal Measurement and Calibration Protocol ) 
+        ** Duration: 80 hours
+
+    * Manufacturing: 
+        ** Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.
+        ** Acceptance Criteria:
+            ***  Custom PCB is available with Diagnostic Interface for end user to use the LibreCar ECU. 
+            *** Documentation is available to end user how to use the LibreCar ECU with firmware, gateware and PCB design files all available as opensource.
+        ** Duration: 80 hours
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="arch/if.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
                         
                         <div style="clear: both"></div>
@@ -162,6 +195,9 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="arch/if.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
                             </nav>
 
