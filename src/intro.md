@@ -1,5 +1,17 @@
 # Introduction
 
-Libre Car Control is an opensource car control effort to enable control of modern cars facilitate the development of non-proprietary vehicle technology. It provides an interface with modern vehicle’s control systems.
+The ECU is a microprocessor-based system that receives input from various sensors, analyzes the data, and controls various driving functions based on the input. LibreCar is a small and affordable Engine Control Unit (ECU), an electronic control module that manages control of an automotive vehicle. 
 
-Developers can formulate control commands like those which determine steering wheel torque sensor, throttle position sensor, and brake position sensor. This low-level interface means that it offers full-range control to develop/hack ADAS features.
+LibreCar comprises of 
+    * opensource hardware
+        **  Opensource softcore of RISC-V
+        **  Digital peripheral IPs for CAN and Ethernet
+    * opensource software
+        **  Device drivers for CAN and Ethernet
+        **  Middleware based on AUTOSAR specification for Automotive protocols
+
+LibreCar embodies both CAN Bus (Controller Area Network) or over Automotive Ethernet Bus, a switched network used in the automotive field to enable supporting modern automotive protocol like 
+    * DoIP ( Diagnostics over Internet Protocol )
+    * DLT ( Diagnostics Log and Trace ) 
+    * XCP (Universal Measurement and Calibration Protocol ) 
+
