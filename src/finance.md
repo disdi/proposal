@@ -26,7 +26,6 @@ Total Development Cost = Cost per Hour x Total hours = 40 € x 320 =	12,800.00 
 ---
 **Calculation for Development Time**
 
-
 Capacity per Week = 20 hours
 
 Total Development Time =  Total hours / Capacity per Week = 320 / 20 = 16 weeks
