@@ -149,23 +149,33 @@
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>The ECU is a microprocessor-based system that receives input from various sensors, analyzes the data, and controls various driving functions based on the input. LibreCar is a small and affordable Engine Control Unit (ECU), an electronic control module that manages control of an automotive vehicle. </p>
-<p>LibreCar comprises of 
+<p>LibreCar comprises of:
 * opensource hardware
-**  Opensource softcore of RISC-V
-**  Digital peripheral IPs for CAN and Ethernet
+-  Opensource softcore of RISC-V
+-  Digital peripheral IPs for CAN and Ethernet
 * opensource software
-**  Device drivers for CAN and Ethernet
-**  Middleware based on AUTOSAR specification for Automotive protocols</p>
+-  Device drivers for CAN and Ethernet
+-  Middleware based on AUTOSAR specification for Automotive protocols</p>
 <p>LibreCar embodies both CAN Bus (Controller Area Network) or over Automotive Ethernet Bus, a switched network used in the automotive field to enable supporting modern automotive protocol like 
 * DoIP ( Diagnostics over Internet Protocol )
 * DLT ( Diagnostics Log and Trace ) 
 * XCP (Universal Measurement and Calibration Protocol ) </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="target-group"><a class="header" href="#target-group">Target Group</a></h1>
-<p>Its modularity and versatility make it suitable for anyone in the below group :
-* Automotive manufacturers/suppliers: To develop Automotive functions like Diagnostics over an opensource HW where they can tweak it to better suite their product needs and are no longer tied to ASIC offering from semiconductor manufacturers.
-* Researchers: To study current security and bandwidth limitations of modern automotive vehicles and come up with new approach to solve them.
-* Makers/Hobbyists: To learn how to make new products in automotive ecosystem and develop interesting Hardware and Software around it in opensource community
-* Educators/students: To understand the current working of automotive ECU and its working principles.</p>
+<p>Its modularity and versatility make it suitable for anyone in the below group :</p>
+<ul>
+<li>
+<p>Automotive manufacturers/suppliers: To develop Automotive functions like Diagnostics over an opensource HW where they can tweak it to better suite their product needs and are no longer tied to ASIC offering from semiconductor manufacturers.</p>
+</li>
+<li>
+<p>Researchers: To study current security and bandwidth limitations of modern automotive vehicles and come up with new approach to solve them.</p>
+</li>
+<li>
+<p>Makers/Hobbyists: To learn how to make new products in automotive ecosystem and develop interesting Hardware and Software around it in opensource community</p>
+</li>
+<li>
+<p>Educators/students: To understand the current working of automotive ECU and its working principles.</p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
 <p>Libre Car Control allows developers to:</p>
 <ul>
@@ -206,12 +216,24 @@ and PHY support to enable Ethernet functionality at data rates up to 10 Mbit/s.<
 <div style="break-before: page; page-break-before: always;"></div><h1 id="interface"><a class="header" href="#interface">Interface</a></h1>
 <h2 id="diagnostic-interface"><a class="header" href="#diagnostic-interface">Diagnostic Interface</a></h2>
 <p>The user has On-Board Diagnostics version 2 (OBD-II) as an interface to the Diagnosis Bus of the LibreCar ECU.
-Below steps are used to send a signal:
-* Establish a connection: First, you need to establish a connection between the LibreCar OBD-II module and the diagnostic tool. This can be done using a wired or wireless connection. For example, you can connect the LibreCar OBD-II module to a Wi-Fi access point and use a diagnostic tool connected to the same network to communicate with it.
-* Set up LibreCar OBD-II module: Once the connection is established, you need to configure the LibreCar OBD-II module to communicate over IP. This can be done by setting the IP address and other network parameters.
-* Identify the OBD-II commands: The OBD-II standard defines a set of commands that can be used to communicate with the different ECUs in the vehicle. You need to identify the OBD-II commands that are relevant to the diagnostic data you are trying to retrieve.
-* Send the OBD-II commands over IP: Once you have identified the relevant OBD-II commands, you can send them over IP to the OBD-II device. You can use a diagnostic tool or a custom application to send the OBD-II commands.
-* Receive the response: Once the OBD-II commands are sent,  LibreCar OBD-II module will respond with the diagnostic data in the form of a response message. You can then parse the response message to extract the diagnostic data you need.</p>
+Below steps are used to send a signal:</p>
+<ul>
+<li>
+<p>Establish a connection: First, you need to establish a connection between the LibreCar OBD-II module and the diagnostic tool. This can be done using a wired or wireless connection. For example, you can connect the LibreCar OBD-II module to a Wi-Fi access point and use a diagnostic tool connected to the same network to communicate with it.</p>
+</li>
+<li>
+<p>Set up LibreCar OBD-II module: Once the connection is established, you need to configure the LibreCar OBD-II module to communicate over IP. This can be done by setting the IP address and other network parameters.</p>
+</li>
+<li>
+<p>Identify the OBD-II commands: The OBD-II standard defines a set of commands that can be used to communicate with the different ECUs in the vehicle. You need to identify the OBD-II commands that are relevant to the diagnostic data you are trying to retrieve.</p>
+</li>
+<li>
+<p>Send the OBD-II commands over IP: Once you have identified the relevant OBD-II commands, you can send them over IP to the OBD-II device. You can use a diagnostic tool or a custom application to send the OBD-II commands.</p>
+</li>
+<li>
+<p>Receive the response: Once the OBD-II commands are sent,  LibreCar OBD-II module will respond with the diagnostic data in the form of a response message. You can then parse the response message to extract the diagnostic data you need.</p>
+</li>
+</ul>
 <h2 id="rest-api-interface"><a class="header" href="#rest-api-interface">REST API Interface</a></h2>
 <p>The user also has REST APIs availble over http to directly talk to services in the LibreCar ECU:</p>
 <h1 id="core-apis"><a class="header" href="#core-apis">Core APIs</a></h1>
@@ -236,31 +258,45 @@ Below steps are used to send a signal:
 <p>Each task completion is considered as a Major or Minor Milestone to help us break down the overall Project duration into smaller sprints which reduces the chance of the task falling into overtime, as well as speeding up the possible completion time.</p>
 <h2 id="milestones-"><a class="header" href="#milestones-">Milestones :</a></h2>
 <p>The milestones for this project have been set in a chronological order, with independent, parallelizable tasks being set at the start, and interdependent tasks being arranged in a serial order and can be done one after the other.</p>
-<pre><code>    * Develop the hardware: 
-        ** Task: Create an opensource gateware which comprises of softcore RISC-V and peripherals like CAN and Ethernet
-        ** Acceptance Criteria: Gateware can be compiled and booted up on a FPGA development board.
-        ** Duration: 80 hours
-
-    * Develop the firmware: 
-        ** Task: Create opensource firmware which comprises of kernel and device drivers to bring up RISC-V soft core and peripherals like CAN and Ethernet.
-        ** Acceptance Criteria: FPGA runs a RISC-V softcore with CAN bus and Ethernet bus communication working.
-        ** Duration: 80 hours
-
-    * Develop the middleware: 
-        ** Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&amp;Trace and  Measuement&amp;Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.
-        ** Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:
-            *** DoIP ( Diagnostics over Internet Protocol )
-            *** DLT ( Diagnostics Log and Trace ) 
-            *** XCP (Universal Measurement and Calibration Protocol ) 
-        ** Duration: 80 hours
-
-    * Manufacturing: 
-        ** Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.
-        ** Acceptance Criteria:
-            ***  Custom PCB is available with Diagnostic Interface for end user to use the LibreCar ECU. 
-            *** Documentation is available to end user how to use the LibreCar ECU with firmware, gateware and PCB design files all available as opensource.
-        ** Duration: 80 hours
-</code></pre>
+<ul>
+<li>
+<p>Develop the hardware:</p>
+<ul>
+<li>Task: Create an opensource gateware which comprises of softcore RISC-V and peripherals like CAN and Ethernet</li>
+<li>Acceptance Criteria: Gateware can be compiled and booted up on a FPGA development board.</li>
+<li>Duration: 80 hours</li>
+</ul>
+</li>
+<li>
+<p>Develop the firmware:</p>
+<ul>
+<li>Task: Create opensource firmware which comprises of kernel and device drivers to bring up RISC-V soft core and peripherals like CAN and Ethernet.</li>
+<li>Acceptance Criteria: FPGA runs a RISC-V softcore with CAN bus and Ethernet bus communication working.</li>
+<li>Duration: 80 hours</li>
+</ul>
+</li>
+<li>
+<p>Develop the middleware:</p>
+<ul>
+<li>Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&amp;Trace and  Measuement&amp;Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.</li>
+<li>Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:</li>
+<li>DoIP ( Diagnostics over Internet Protocol )</li>
+<li>DLT ( Diagnostics Log and Trace ) </li>
+<li>XCP (Universal Measurement and Calibration Protocol )</li>
+<li>Duration: 80 hours</li>
+</ul>
+</li>
+<li>
+<p>Manufacturing:</p>
+<ul>
+<li>Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.</li>
+<li>Acceptance Criteria:</li>
+<li>Custom PCB is available with Diagnostic Interface for end user to use the LibreCar ECU.</li>
+<li>Documentation is available to end user how to use the LibreCar ECU with firmware, gateware and PCB design files all available as opensource.</li>
+<li>Duration: 80 hours</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 
