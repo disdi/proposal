@@ -10,7 +10,7 @@ curly-quotes = true
 git-repository-url = "https://github.com/disdi/proposal"
 site-url = "https://saketsinha.de/proposal/"
 
-[output.pdf]
+#[output.pdf]
 ## Set for auto-retrying if failed to generate PDF.
 # trying-times = 1
 ## This backend only support latest Chromium based browsers, not Safari and Firefox currently.
@@ -21,18 +21,18 @@ site-url = "https://saketsinha.de/proposal/"
 # static_site_url = "https://rust-lang.github.io/mdBook"
 ## Check Chrome Devtools Protocol Docs for the explanation of the following params:
 ## https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF
-landscape = false
-display-header-footer = true
-print-background = true
-scale = 1
-paper-width = 8
-paper-height = 10
-margin-top = 0.1
-margin-bottom = 0.1
-margin-left = 0.1
-margin-right = 0.1
-page-ranges = ""
-ignore-invalid-page-ranges = false
+#landscape = false
+#display-header-footer = true
+#print-background = true
+#scale = 1
+#paper-width = 8
+#paper-height = 10
+#margin-top = 0.1
+#margin-bottom = 0.1
+#margin-left = 0.1
+#margin-right = 0.1
+#page-ranges = ""
+#ignore-invalid-page-ranges = false
 #header-template = "<h3 style='font-size:8px; margin-left: 48%' class='title'></h3>"
 #footer-template = "<p style='font-size:10px; margin-left: 48%'><span class='pageNumber'></span> / <span class='totalPages'></span></p>"
 #prefer-css-page-size = true
