@@ -10,7 +10,7 @@ LibreCar comprises of:
     * Device drivers for CAN and Ethernet
     * Middleware based on AUTOSAR specification for Automotive protocols
 
-LibreCar embodies both CAN Bus (Controller Area Network) or over Automotive Ethernet Bus, a switched network used in the automotive field to enable supporting modern automotive protocol like 
+LibreCar embodies both CAN Bus (Controller Area Network) or over Automotive Ethernet Bus, a switched network used in the automotive field to enable supporting modern automotive protocols listed below: 
 * DoIP ( Diagnostics over Internet Protocol )
 * DLT ( Diagnostics Log and Trace ) 
 * XCP ( Universal Measurement and Calibration Protocol ) 

@@ -1,4 +1,4 @@
-# Interface
+# User Interface
 
 ## Diagnostic Interface
 The user has On-Board Diagnostics version 2 (OBD-II) as an interface to the Diagnosis Bus of the LibreCar ECU.
