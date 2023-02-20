@@ -25,14 +25,14 @@ The milestones for this project have been set in a chronological order, with ind
 * Develop the middleware:
     * Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&Trace and  Measuement&Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.
     * Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:
-	* DoIP ( Diagnostics over Internet Protocol )
-	* DLT ( Diagnostics Log and Trace ) 
-	* XCP (Universal Measurement and Calibration Protocol )
+	    * DoIP ( Diagnostics over Internet Protocol )
+	    * DLT ( Diagnostics Log and Trace ) 
+	    * XCP (Universal Measurement and Calibration Protocol )
 	* Duration: 80 hours
 
 * Manufacturing:
     * Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.
     * Acceptance Criteria:
-	* Custom PCB is available with Diagnostic Interface for end user to use the LibreCar ECU.
-	* Documentation is available to end user how to use the LibreCar ECU with firmware, gateware and PCB design files all available as opensource.
+	    * Custom PCB is available with Diagnostic Interface for end user to use the LibreCar ECU.
+	    * Documentation is available to end user how to use the LibreCar ECU with firmware, gateware and PCB design files all available as opensource.
 	* Duration: 80 hours
