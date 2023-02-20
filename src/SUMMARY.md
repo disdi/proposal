@@ -7,4 +7,4 @@
   + [Component Overview](arch/components.md)
   + [Interface](arch/if.md)
 * [Development Plan](plan.md)
-* [Budget](plan.md)
+* [Budget](finance.md)
