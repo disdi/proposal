@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Development Plan - Libre Car Control</title>
+        <title>Budget - Libre Car Control</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html" class="active"><strong aria-hidden="true">5.</strong> Development Plan</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html" class="active"><strong aria-hidden="true">5.</strong> Development Plan</a></li><li class="chapter-item expanded "><a href="plan.html" class="active"><strong aria-hidden="true">6.</strong> Budget</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -175,10 +175,13 @@
 <p>Develop the middleware:</p>
 <ul>
 <li>Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&amp;Trace and  Measuement&amp;Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.</li>
-<li>Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:</li>
+<li>Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:
+<ul>
 <li>DoIP ( Diagnostics over Internet Protocol )</li>
 <li>DLT ( Diagnostics Log and Trace ) </li>
 <li>XCP (Universal Measurement and Calibration Protocol )</li>
+</ul>
+</li>
 <li>Duration: 80 hours</li>
 </ul>
 </li>
@@ -186,9 +189,12 @@
 <p>Manufacturing:</p>
 <ul>
 <li>Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.</li>
-<li>Acceptance Criteria:</li>
+<li>Acceptance Criteria:
+<ul>
 <li>Custom PCB is available with Diagnostic Interface for end user to use the LibreCar ECU.</li>
 <li>Documentation is available to end user how to use the LibreCar ECU with firmware, gateware and PCB design files all available as opensource.</li>
+</ul>
+</li>
 <li>Duration: 80 hours</li>
 </ul>
 </li>
@@ -202,6 +208,9 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
+                                                    <a rel="next" href="plan.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -213,6 +222,9 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
+                                    <a rel="next" href="plan.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>
