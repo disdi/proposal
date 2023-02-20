@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html"><strong aria-hidden="true">5.</strong> Development Plan</a></li><li class="chapter-item expanded "><a href="plan.html"><strong aria-hidden="true">6.</strong> Budget</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html"><strong aria-hidden="true">5.</strong> Development Plan</a></li><li class="chapter-item expanded "><a href="finance.html"><strong aria-hidden="true">6.</strong> Budget</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -148,7 +148,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>The ECU is a microprocessor-based system that receives input from various sensors, analyzes the data, and controls various driving functions based on the input. LibreCar is a small and affordable device which can emulate an actual Engine Control Unit (ECU), an electronic control module that manages control of an automotive vehicle.</p>
+<p>The ECU is a microprocessor-based system that receives input from various sensors, analyzes the data, and controls various driving functions based on the input. LibreCar is a small and affordable device which can emulate an actual <strong>Engine Control Unit (ECU)</strong>, an electronic control module that manages control of an automotive vehicle.</p>
 <p>Librecar is an all-in-one device for building, testing, monitoring, and experimenting with Automotive ECUs. Built around a unique FPGA-based architecture, Librecar’s digital hardware can be fully customized to suit the application at hand. As a result, it can act as a no-compromise Automotive protocol analyzer, an Automotive-hacking multi-tool, or an Automotive development platform.</p>
 <p>LibreCar comprises of:</p>
 <ul>
@@ -167,9 +167,9 @@
 </ul>
 <p>LibreCar embodies both CAN Bus (Controller Area Network) or over Automotive Ethernet Bus, a switched network used in the automotive field to enable supporting modern automotive protocols listed below: </p>
 <ul>
-<li>DoIP ( Diagnostics over Internet Protocol )</li>
-<li>DLT ( Diagnostics Log and Trace ) </li>
-<li>XCP ( Universal Measurement and Calibration Protocol )</li>
+<li><strong>DoIP</strong> ( Diagnostics over Internet Protocol )</li>
+<li><strong>DLT</strong> ( Diagnostics Log and Trace ) </li>
+<li><strong>XCP</strong> ( Universal Measurement and Calibration Protocol )</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="target-group"><a class="header" href="#target-group">Target Group</a></h1>
 <p>LibreCar is a fully reconfigurable test instrument that provides all the hardware, gateware, firmware, and software you will need to work with—and, indeed, to master Automotive domain. Below are a few of the challenges to which one should be able to apply LibreCar to:</p>
@@ -277,7 +277,7 @@ Below steps are used to send a signal:</p>
 <p>The milestones for this project have been set in a chronological order, with independent, parallelizable tasks being set at the start, and interdependent tasks being arranged in a serial order and can be done one after the other.</p>
 <ul>
 <li>
-<p>Develop the hardware:</p>
+<p><strong>Develop the hardware</strong>:</p>
 <ul>
 <li>Task: Create an opensource gateware which comprises of softcore RISC-V and peripherals like CAN and Ethernet</li>
 <li>Acceptance Criteria: Gateware can be compiled and booted up on a FPGA development board.</li>
@@ -285,7 +285,7 @@ Below steps are used to send a signal:</p>
 </ul>
 </li>
 <li>
-<p>Develop the firmware:</p>
+<p><strong>Develop the firmware</strong>:</p>
 <ul>
 <li>Task: Create opensource firmware which comprises of kernel and device drivers to bring up RISC-V soft core and peripherals like CAN and Ethernet.</li>
 <li>Acceptance Criteria: FPGA runs a RISC-V softcore with CAN bus and Ethernet bus communication working.</li>
@@ -293,7 +293,7 @@ Below steps are used to send a signal:</p>
 </ul>
 </li>
 <li>
-<p>Develop the middleware:</p>
+<p><strong>Develop the middleware</strong>:</p>
 <ul>
 <li>Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&amp;Trace and  Measuement&amp;Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.</li>
 <li>Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:
@@ -307,7 +307,7 @@ Below steps are used to send a signal:</p>
 </ul>
 </li>
 <li>
-<p>Manufacturing:</p>
+<p><strong>Manufacturing</strong>:</p>
 <ul>
 <li>Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.</li>
 <li>Acceptance Criteria:
@@ -320,59 +320,50 @@ Below steps are used to send a signal:</p>
 </ul>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="work-breakdown-structure-1"><a class="header" href="#work-breakdown-structure-1">WORK BREAKDOWN STRUCTURE</a></h1>
-<p>A work breakdown structure has been created to identify and correctly estimate the time and cost of each possible task in the proposal. Most of task do depend on the progress of each other so they need to be executed in a serial Top-Down approach.</p>
-<h2 id="task-duration-1"><a class="header" href="#task-duration-1">Task Duration</a></h2>
-<p>To estimate the time of each task, the beta distribution formula was used, shown below. This formula allows to base the estimated time more on the average time a task may require, giving a more accurate estimation of the time needed to finish a task.</p>
-<p>𝐸𝑠𝑡𝑖𝑚𝑎𝑡𝑒𝑑 𝑡𝑖𝑚𝑒 = (𝑜𝑝𝑡𝑖𝑚𝑖𝑠𝑡𝑖𝑐 𝑡𝑖𝑚𝑒 + 4 ∗ 𝑎𝑣𝑒𝑟𝑎𝑔𝑒 𝑡𝑖𝑚𝑒 + 𝑝𝑒𝑠𝑠𝑖𝑚𝑖𝑠𝑡𝑖𝑐 𝑡𝑖𝑚𝑒) / 6 </p>
-<p>Each task completion is considered as a Major or Minor Milestone to help us break down the overall Project duration into smaller sprints which reduces the chance of the task falling into overtime, as well as speeding up the possible completion time.</p>
-<h2 id="milestones--1"><a class="header" href="#milestones--1">Milestones :</a></h2>
-<p>The milestones for this project have been set in a chronological order, with independent, parallelizable tasks being set at the start, and interdependent tasks being arranged in a serial order and can be done one after the other.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="total-cost-of-proposal"><a class="header" href="#total-cost-of-proposal">TOTAL COST OF PROPOSAL</a></h1>
+<p>The cost of the project is divided into below categories :</p>
 <ul>
-<li>
-<p>Develop the hardware:</p>
+<li>Development cost for gateware, firmware, middleware and hardware design</li>
+</ul>
+<table><thead><tr><th>Contribution</th><th>No. of hours</th></tr></thead><tbody>
+<tr><td>Milestone 1 -  Gateware Development</td><td>80</td></tr>
+<tr><td>Milestone 2 -  Firmware Development</td><td>80</td></tr>
+<tr><td>Milestone 3 -  Middleware Development</td><td>80</td></tr>
+<tr><td>Milestone 4 -  Manufactoring</td><td>80</td></tr>
+<tr><td>Total hours</td><td>320</td></tr>
+</tbody></table>
+<hr />
+<p><strong>Calculation for Development Cost</strong></p>
+<p>Cost per Hour =	40.00 €</p>
+<p>Total Development Cost = Cost per Hour x Total hours = 40 € x 320 =	12,800.00 €</p>
+<hr />
+<hr />
+<p><strong>Calculation for Development Time</strong></p>
+<p>Capacity per Week = 20 hours</p>
+<p>Total Development Time =  Total hours / Capacity per Week = 320 / 20 = 16 weeks</p>
+<hr />
 <ul>
-<li>Task: Create an opensource gateware which comprises of softcore RISC-V and peripherals like CAN and Ethernet</li>
-<li>Acceptance Criteria: Gateware can be compiled and booted up on a FPGA development board.</li>
-<li>Duration: 80 hours</li>
+<li>Cost of FPGA Boards and accessories used in the development process</li>
 </ul>
-</li>
-<li>
-<p>Develop the firmware:</p>
+<table><thead><tr><th>Item Type</th><th>Name of material</th><th>Units</th><th>Price</th></tr></thead><tbody>
+<tr><td>Hardware</td><td>FPGA Development Board</td><td>3</td><td>900 €</td></tr>
+<tr><td>Hardware</td><td>Accessories for CAN &amp; ETHERNET</td><td>3</td><td>300 €</td></tr>
+<tr><td>Total Hardware Cost</td><td></td><td></td><td>1200 €</td></tr>
+</tbody></table>
 <ul>
-<li>Task: Create opensource firmware which comprises of kernel and device drivers to bring up RISC-V soft core and peripherals like CAN and Ethernet.</li>
-<li>Acceptance Criteria: FPGA runs a RISC-V softcore with CAN bus and Ethernet bus communication working.</li>
-<li>Duration: 80 hours</li>
+<li>Cost of development for PCB Design and Manufactoring</li>
 </ul>
-</li>
-<li>
-<p>Develop the middleware:</p>
-<ul>
-<li>Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&amp;Trace and  Measuement&amp;Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.</li>
-<li>Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:
-<ul>
-<li>DoIP ( Diagnostics over Internet Protocol )</li>
-<li>DLT ( Diagnostics Log and Trace ) </li>
-<li>XCP (Universal Measurement and Calibration Protocol )</li>
-</ul>
-</li>
-<li>Duration: 80 hours</li>
-</ul>
-</li>
-<li>
-<p>Manufacturing:</p>
-<ul>
-<li>Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.</li>
-<li>Acceptance Criteria:
-<ul>
-<li>Custom PCB is available with Diagnostic Interface for end user to use the LibreCar ECU.</li>
-<li>Documentation is available to end user how to use the LibreCar ECU with firmware, gateware and PCB design files all available as opensource.</li>
-</ul>
-</li>
-<li>Duration: 80 hours</li>
-</ul>
-</li>
-</ul>
+<table><thead><tr><th>Item Type</th><th>Name of material</th><th>Units</th><th>Price</th></tr></thead><tbody>
+<tr><td>Hardware</td><td>PCB Design</td><td></td><td>1000 €</td></tr>
+<tr><td>Hardware</td><td>PCB Manufactoring</td><td>10</td><td>1000 €</td></tr>
+<tr><td>Miscellaneous</td><td>Excise duty</td><td></td><td>209 €</td></tr>
+<tr><td>Miscellaneous</td><td>Internet Bill</td><td></td><td>450 €</td></tr>
+<tr><td>Total Manufactoring Cost</td><td></td><td></td><td>2659 €</td></tr>
+</tbody></table>
+<hr />
+<p><strong>Total Cost of Proposal</strong></p>
+<p>Total Cost of Proposal = Total Development Cost + Total Hardware Cost + Total Manufactoring Cost = 12800 + 1200 + 2659 = 16659 €</p>
+<hr />
 
                     </main>
 

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Budget - Libre Car Control</title>
+        <title>Development Plan - Libre Car Control</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html" class="active"><strong aria-hidden="true">5.</strong> Development Plan</a></li><li class="chapter-item expanded "><a href="plan.html" class="active"><strong aria-hidden="true">6.</strong> Budget</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html" class="active"><strong aria-hidden="true">5.</strong> Development Plan</a></li><li class="chapter-item expanded "><a href="finance.html"><strong aria-hidden="true">6.</strong> Budget</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -156,7 +156,7 @@
 <p>The milestones for this project have been set in a chronological order, with independent, parallelizable tasks being set at the start, and interdependent tasks being arranged in a serial order and can be done one after the other.</p>
 <ul>
 <li>
-<p>Develop the hardware:</p>
+<p><strong>Develop the hardware</strong>:</p>
 <ul>
 <li>Task: Create an opensource gateware which comprises of softcore RISC-V and peripherals like CAN and Ethernet</li>
 <li>Acceptance Criteria: Gateware can be compiled and booted up on a FPGA development board.</li>
@@ -164,7 +164,7 @@
 </ul>
 </li>
 <li>
-<p>Develop the firmware:</p>
+<p><strong>Develop the firmware</strong>:</p>
 <ul>
 <li>Task: Create opensource firmware which comprises of kernel and device drivers to bring up RISC-V soft core and peripherals like CAN and Ethernet.</li>
 <li>Acceptance Criteria: FPGA runs a RISC-V softcore with CAN bus and Ethernet bus communication working.</li>
@@ -172,7 +172,7 @@
 </ul>
 </li>
 <li>
-<p>Develop the middleware:</p>
+<p><strong>Develop the middleware</strong>:</p>
 <ul>
 <li>Task: Once the hardware and firmware development are complete, the next step is to build the middleware which can support automotive protocols like Diagnostics, Log&amp;Trace and  Measuement&amp;Calibration based on Autosar(AUTomotive Open System ARchitecture) specification.</li>
 <li>Acceptance Criteria: Below Automotive protocols are up to make it function like a modern automotive ECU:
@@ -186,7 +186,7 @@
 </ul>
 </li>
 <li>
-<p>Manufacturing:</p>
+<p><strong>Manufacturing</strong>:</p>
 <ul>
 <li>Task: After the prototype has been tested on a development FPGA board as working, the final product can be manufactured. This involves designing and producing the few PCBs available for evaluation by interested end users.</li>
 <li>Acceptance Criteria:
@@ -208,7 +208,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="plan.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="finance.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -222,7 +222,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="plan.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="finance.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

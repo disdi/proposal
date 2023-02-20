@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Component Overview - Libre Car Control</title>
+        <title>Budget - Libre Car Control</title>
                 
 
         <!-- Custom HTML head -->
@@ -14,21 +14,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-                <link rel="icon" href="../favicon.svg">
-                        <link rel="shortcut icon" href="../favicon.png">
-                <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-                <link rel="stylesheet" href="../css/print.css" media="print">
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
         
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
         
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -36,7 +36,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "../";
+            var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="../design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="../arch/components.html" class="active"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="../arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="../plan.html"><strong aria-hidden="true">5.</strong> Development Plan</a></li><li class="chapter-item expanded "><a href="../finance.html"><strong aria-hidden="true">6.</strong> Budget</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="target.html"><strong aria-hidden="true">2.</strong> Target Group</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">3.</strong> Design</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Architecture</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="arch/system.html"><strong aria-hidden="true">4.1.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arch/components.html"><strong aria-hidden="true">4.2.</strong> Component Overview</a></li><li class="chapter-item expanded "><a href="arch/if.html"><strong aria-hidden="true">4.3.</strong> Interface</a></li></ol></li><li class="chapter-item expanded "><a href="plan.html"><strong aria-hidden="true">5.</strong> Development Plan</a></li><li class="chapter-item expanded "><a href="finance.html" class="active"><strong aria-hidden="true">6.</strong> Budget</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -114,7 +114,7 @@
                     <h1 class="menu-title">Libre Car Control</h1>
 
                     <div class="right-buttons">
-                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                                                                         <a href="https://github.com/disdi/proposal" title="Git repository" aria-label="Git repository">
@@ -146,40 +146,59 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="components"><a class="header" href="#components">Components</a></h1>
-<p>The main components of system architecture are broken down in Software and Hardware.</p>
-<p><img src="../images/top.svg" alt=" Components " /></p>
-<h2 id="hardware"><a class="header" href="#hardware">Hardware</a></h2>
-<p>iCE40 FPGA chip has severfal Pmod interface (peripheral module interface) for connecting peripheral modules.</p>
-<p><img src="../images/fpga.svg" alt=" FPGA " /></p>
-<p>Pmod CAN and Pmod NIC100  are directly connected to FPGA via this interface : </p>
-<p><img src="../images/pmod.svg" alt=" PMOD " /></p>
-<h3 id="can"><a class="header" href="#can">CAN</a></h3>
-<p>Pmod CAN is a CAN 2.0B controller with an integrated transceiver. The embedded Microchip MCP25625 chip connects directly to the physical CAN Bus.</p>
-<p><img src="../images/pmod_can.svg" alt=" PMOD CAN " /></p>
-<h3 id="ethernet"><a class="header" href="#ethernet">Ethernet</a></h3>
-<p>The PmodNIC100 utilizes Microchip’s ENC424J600 to provide both MAC
-and PHY support to enable Ethernet functionality at data rates up to 10 Mbit/s.</p>
-<p><img src="../images/pmod_nic100.svg" alt=" PMOD NIC100 " /></p>
-<h2 id="gateware"><a class="header" href="#gateware">Gateware</a></h2>
-<p>We use Litex framework to program VexRiscv-SMP CPU Risc-V SOC on the iCEBreaker FPGA  that can be programmed from C language.</p>
-<p><img src="../images/litex.svg" alt=" Litex " /></p>
-<h2 id="firmware"><a class="header" href="#firmware">Firmware</a></h2>
-<p>C language based device driver is used to program SPI interface that connects to CAN bus via MCP25625 and Ehternet via  ENC424J600.</p>
-<h2 id="application"><a class="header" href="#application">Application</a></h2>
-<p>Service to signal conversion layer is written to trasmit Ethernet based SOMEIP prototocol to CAN based signals. </p>
+                        <h1 id="total-cost-of-proposal"><a class="header" href="#total-cost-of-proposal">TOTAL COST OF PROPOSAL</a></h1>
+<p>The cost of the project is divided into below categories :</p>
+<ul>
+<li>Development cost for gateware, firmware, middleware and hardware design</li>
+</ul>
+<table><thead><tr><th>Contribution</th><th>No. of hours</th></tr></thead><tbody>
+<tr><td>Milestone 1 -  Gateware Development</td><td>80</td></tr>
+<tr><td>Milestone 2 -  Firmware Development</td><td>80</td></tr>
+<tr><td>Milestone 3 -  Middleware Development</td><td>80</td></tr>
+<tr><td>Milestone 4 -  Manufactoring</td><td>80</td></tr>
+<tr><td>Total hours</td><td>320</td></tr>
+</tbody></table>
+<hr />
+<p><strong>Calculation for Development Cost</strong></p>
+<p>Cost per Hour =	40.00 €</p>
+<p>Total Development Cost = Cost per Hour x Total hours = 40 € x 320 =	12,800.00 €</p>
+<hr />
+<hr />
+<p><strong>Calculation for Development Time</strong></p>
+<p>Capacity per Week = 20 hours</p>
+<p>Total Development Time =  Total hours / Capacity per Week = 320 / 20 = 16 weeks</p>
+<hr />
+<ul>
+<li>Cost of FPGA Boards and accessories used in the development process</li>
+</ul>
+<table><thead><tr><th>Item Type</th><th>Name of material</th><th>Units</th><th>Price</th></tr></thead><tbody>
+<tr><td>Hardware</td><td>FPGA Development Board</td><td>3</td><td>900 €</td></tr>
+<tr><td>Hardware</td><td>Accessories for CAN &amp; ETHERNET</td><td>3</td><td>300 €</td></tr>
+<tr><td>Total Hardware Cost</td><td></td><td></td><td>1200 €</td></tr>
+</tbody></table>
+<ul>
+<li>Cost of development for PCB Design and Manufactoring</li>
+</ul>
+<table><thead><tr><th>Item Type</th><th>Name of material</th><th>Units</th><th>Price</th></tr></thead><tbody>
+<tr><td>Hardware</td><td>PCB Design</td><td></td><td>1000 €</td></tr>
+<tr><td>Hardware</td><td>PCB Manufactoring</td><td>10</td><td>1000 €</td></tr>
+<tr><td>Miscellaneous</td><td>Excise duty</td><td></td><td>209 €</td></tr>
+<tr><td>Miscellaneous</td><td>Internet Bill</td><td></td><td>450 €</td></tr>
+<tr><td>Total Manufactoring Cost</td><td></td><td></td><td>2659 €</td></tr>
+</tbody></table>
+<hr />
+<p><strong>Total Cost of Proposal</strong></p>
+<p>Total Cost of Proposal = Total Development Cost + Total Hardware Cost + Total Manufactoring Cost = 12800 + 1200 + 2659 = 16659 €</p>
+<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../arch/system.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="plan.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../arch/if.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -187,13 +206,10 @@ and PHY support to enable Ethernet functionality at data rates up to 10 Mbit/s.<
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../arch/system.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="plan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../arch/if.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>
@@ -206,13 +222,13 @@ and PHY support to enable Ethernet functionality at data rates up to 10 Mbit/s.<
         </script>
         
         
-                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
         
-        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
