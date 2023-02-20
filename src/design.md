@@ -1,14 +1,11 @@
-# Overview
+# Design
 
-Libre Car Control allows developers to:
+LibreCar FPGA runs a RISC-V  softcore complemented by peripherals for the implementation of physical interfaces such as CAN, Automotive Ethernet, and some general purpose interfaces (GPIO). Furthermore, the FPGA is supported by Flash and RAM memory.
 
-* Implement a simple service over Ethernet
-* Convert this service to signal in Hardware
-* Use this signal in control bus of vehicle CAN network
+The main functions of this design  is to come up with a Communication Engine which enables Routing or switching of data packets between all the interfaces based on:
+    * LIN data – based on LIN-ID (L2)
+    * CAN data – based on CAN-ID (L2)
+    * Ethernet / IP – based on Ethernet MAC & IP address (with TCP/UDP port for packet inspection)
+    * AUTOSAR PDU – based on AUTOSAR PDU ID
 
-## Product Objectives
-
-  + Read control messages from the Vehicle's CAN Bus via Ethernet network
-  + Send control commands to the Vehicle's CAN Bus via Ethernet network
-
-Control commands can be published to control bus in the form of Ethernet packet with pub/sub model from a node executing a path planning algorithm.
+![ Autosar PDU ](images/PDU.svg)
