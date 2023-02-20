@@ -153,9 +153,26 @@
 <li>LIN data – based on LIN-ID (L2)</li>
 <li>CAN data – based on CAN-ID (L2)</li>
 <li>Ethernet / IP – based on Ethernet MAC &amp; IP address (with TCP/UDP port for packet inspection)</li>
-<li>AUTOSAR PDU – based on AUTOSAR PDU ID</li>
+<li>AUTOSAR PDU (Packet Data Unit) – In order to create a level of abstraction for signals from the physical entity of their ECU, AUTOSAR has introduced the concept of an AUTOSAR PDU (Protocol Data Unit).</li>
 </ul>
 <p><img src="images/PDU.png" alt=" Autosar PDU " /></p>
+<p>This design helps us braking down into a set of functional groups:</p>
+<ul>
+<li>Switching layer
+<ul>
+<li>L2 CAN switching</li>
+<li>L2 LIN switching</li>
+<li>L2 Ethernet switching, L3 IP routing, L4 UDP/TCP port handling</li>
+</ul>
+</li>
+<li>PDU handling
+<ul>
+<li>AUTOSAR PDU based routing</li>
+<li>PDU aggregation</li>
+</ul>
+</li>
+</ul>
+<p>Using the above layers, we propose to implement Automotive protocols like Diagnostics, Logging and Measurement.</p>
 
                     </main>
 
